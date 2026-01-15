@@ -38,10 +38,35 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
-            background: var(--bg-primary);
+            background: linear-gradient(135deg, #eaf1ff 0%, #f8fbff 50%, #eef2f8 100%);
             color: var(--primary-text);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            width: 720px;
+            height: 720px;
+            border-radius: 50%;
+            filter: blur(140px);
+            opacity: 0.35;
+            z-index: -1;
+        }
+
+        body::before {
+            background: radial-gradient(circle at 30% 30%, rgba(0, 113, 227, 0.35), rgba(255, 255, 255, 0));
+            top: -180px;
+            left: -160px;
+        }
+
+        body::after {
+            background: radial-gradient(circle at 70% 70%, rgba(0, 119, 237, 0.28), rgba(255, 255, 255, 0));
+            bottom: -240px;
+            right: -120px;
         }
 
         /* Header */
@@ -127,6 +152,12 @@
             margin: 0 auto;
             padding: 8rem 2rem 6rem;
             text-align: center;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            border-radius: 28px;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+            backdrop-filter: saturate(180%) blur(18px);
+            -webkit-backdrop-filter: saturate(180%) blur(18px);
         }
 
         .hero h1 {
@@ -285,12 +316,14 @@
         }
 
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.72);
             border-radius: 18px;
             padding: 2.5rem;
-            box-shadow: var(--shadow-sm);
+            box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            backdrop-filter: saturate(180%) blur(18px);
+            -webkit-backdrop-filter: saturate(180%) blur(18px);
         }
 
         .card:hover {
@@ -360,13 +393,15 @@
         }
 
         .timeline-item {
-            background: white;
+            background: rgba(255, 255, 255, 0.72);
             border-radius: 18px;
             padding: 2.5rem;
             margin-bottom: 1.5rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(0, 0, 0, 0.04);
+            box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.45);
             transition: all 0.3s ease;
+            backdrop-filter: saturate(180%) blur(18px);
+            -webkit-backdrop-filter: saturate(180%) blur(18px);
         }
 
         .timeline-item:hover {
@@ -399,12 +434,14 @@
 
         /* Projects */
         .project-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.75);
             border-radius: 18px;
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(0, 0, 0, 0.04);
+            box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.45);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: saturate(180%) blur(18px);
+            -webkit-backdrop-filter: saturate(180%) blur(18px);
         }
 
         .project-card:hover {
@@ -599,6 +636,7 @@
             </button>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#hobby">Hobby</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -610,7 +648,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <h1 class="fade-in">Pranesh Senthilkumar</h1>
-        <p class="subtitle fade-in stagger-1">Data Scientist & GenAI Architect</p>
+        <p class="subtitle fade-in stagger-1">Data Scientist</p>
         <p class="description fade-in stagger-2">Transforming data into strategic advantage. Building intelligent systems that deliver $25M+ in business value through pricing optimization, generative AI, and machine learning at global scale.</p>
         
         <div class="cta-buttons fade-in stagger-3">
@@ -636,7 +674,7 @@
 
         <div class="profile-section">
             <div class="profile-img">
-                <img src="pranesh.jpg" alt="Pranesh Senthilkumar">
+                <img src="pranesh.png" alt="Pranesh Senthilkumar">
             </div>
         </div>
     </section>
@@ -812,6 +850,24 @@
                             <span class="tag">PySpark</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobby Section -->
+    <section id="hobby" class="section section-alt">
+        <div class="section-content">
+            <h2 class="section-title">Algorithmic Trading</h2>
+            <p class="section-subtitle">Evenings and weekends spent tinkering with small, rules-based strategies</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-area"></i>
+                    </div>
+                    <h3>How I Approach It</h3>
+                    <p>Keep it light, systematic, and data-driven. I backtest ideas, favor simple risk controls over flashy signals, and treat every experiment as a way to sharpen discipline. No proprietary details—just enough structure to keep learning.</p>
                 </div>
             </div>
         </div>
