@@ -122,6 +122,25 @@
             opacity: 1;
         }
 
+        .nav-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.5rem 0.95rem;
+            border-radius: 12px;
+            background: var(--accent);
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 10px 24px rgba(224, 36, 42, 0.18);
+            transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .nav-cta a:hover {
+            background: var(--accent-hover);
+            box-shadow: 0 12px 28px rgba(224, 36, 42, 0.26);
+            transform: translateY(-1px);
+        }
+
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -656,6 +675,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#hobby">Hobby</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="nav-cta"><a href="resume.pdf" download>Download Résumé</a></li>
             </ul>
         </nav>
     </header>
